@@ -9,13 +9,10 @@ namespace RobotsDinosaurs
     public class Dinosaur
     {
         // Member Variables
-        string type;
+        string type; //Raptor, Pteradactyl, T-Rex
         int health;
         int energy;
-        int attackPower;
-
-        //attackPower 1-Bite 2-Claw 3-tailwhip
-
+        int attackPower; //attackPower 1-Bite 2-Claw 3-tailwhip
 
         // Constructor
         public Dinosaur(string type, int attackPower)
@@ -24,17 +21,14 @@ namespace RobotsDinosaurs
             this.attackPower = attackPower;
             health = 100;
             energy = 100;
-
         }
 
         // Member Methods
-        //AttackRobot
+       
+        //AttackRobot on a battlefield | Loss of health depending on attackPower
 
-        //Change in health
 
-        //Change in weapon
 
-        //Change in health
 
     }
 }

@@ -6,20 +6,36 @@ using System.Threading.Tasks;
 
 namespace RobotsDinosaurs
 {
-    class Fleet
+    public class Fleet //Creating a fleet of Robots
     {
-        // Member Variables
-        Robot robot1 = new Robot("Ro-Berto", 10);
-        Robot robot2 = new Robot("Ro-Londa", 20);
-        Robot robot3 = new Robot("Ro-cker", 30);
+        //Member Variables (Has a)
+        Robot robot1;
+        Robot robot2;
+        Robot robot3;
+        //list of robotsl{}
+        List<Robot> robots;
 
-        // Constructor
+        //weapons
+        Weapon gun;
+        Weapon Granade;
+        Weapon Missle;
+        //list of weapons
+        List<string> weapons = new List<string>();
+
+        // Constructor | starts out with 3 robots
         public Fleet()
         {
-
+            robot1 = new Robot("Trooper1001", new Weapon("Gun", 10));
+            robot2 = new Robot("Johnny5", new Weapon("Granade", 20));
+            robot3 = new Robot("Terminator", new Weapon("Missile", 30));
+            robots = new List<Robot>();
         }
 
         // Member Methods
+
+
+
+
 
 
     }

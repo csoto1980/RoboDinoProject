@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace RobotsDinosaurs
 {
-    class Weapon
+    public class Weapon
     {
         // Member Variables (Has a)
-        int attackPower;
-        bool ammunition;
-         
+        string type;   //Gun, Granade, Missile
+        int attackPower; // 10, 20, 30
 
         // Constructor
-        public Weapon()
+        public Weapon(string type, int attackPower)
         {
-
+            this.type = type;
+            this.attackPower = attackPower;
         }
 
         // Member Methods
-        //sword weapon power
-        
+
 
     }
 }
