@@ -9,8 +9,8 @@ namespace RobotsDinosaurs
     public class Weapon
     {
         // Member Variables (Has a)
-        string type;   //Gun, Granade, Missile
-        int attackPower; // 10, 20, 30
+        public string type;   
+        public int attackPower; 
 
         // Constructor
         public Weapon(string type, int attackPower)
@@ -20,7 +20,6 @@ namespace RobotsDinosaurs
         }
 
         // Member Methods
-
 
     }
 }

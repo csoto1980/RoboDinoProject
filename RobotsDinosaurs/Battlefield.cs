@@ -9,8 +9,8 @@ namespace RobotsDinosaurs
     public class Battlefield //game class
     {
         // Member Variables (has a)
-        Fleet fleet;
-        Herd herd;
+        public Fleet fleet;
+        public Herd herd;
 
         // Constructor
         public Battlefield()
@@ -20,9 +20,9 @@ namespace RobotsDinosaurs
         }
 
         // Member Methods
-     
+
         //Random selection of which Dino & Robo start battle
-        private int RandomBattleSelection()
+        public int RandomBattleSelection()
         {
             //Pick random Robot
             

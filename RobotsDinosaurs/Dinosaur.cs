@@ -9,26 +9,30 @@ namespace RobotsDinosaurs
     public class Dinosaur
     {
         // Member Variables
-        string type; //Raptor, Pteradactyl, T-Rex
-        int health;
-        int energy;
-        int attackPower; //attackPower 1-Bite 2-Claw 3-tailwhip
+        public string type; 
+        public int health;
+        public int energy;
+        public int attackPower; 
 
         // Constructor
-        public Dinosaur(string type, int attackPower)
+        public Dinosaur()
         {
-            this.type = type;
-            this.attackPower = attackPower;
+            type = ChooseTypeOfDino();
+            attackPower = 10;
             health = 100;
             energy = 100;
         }
 
         // Member Methods
-       
-        //AttackRobot on a battlefield | Loss of health depending on attackPower
-
-
-
-
+       public string ChooseTypeOfDino()
+        {
+            Console.WriteLine("Choose Dino:");
+            return Console.ReadLine();
+        }
+        public void AttackRobo(Robot robot) //This passes in a Robot
+        {
+            //Dino attacks robot
+            robot.health -= attackPower;
+        }
     }
 }
