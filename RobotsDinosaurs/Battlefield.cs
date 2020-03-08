@@ -6,61 +6,54 @@ using System.Threading.Tasks;
 
 namespace RobotsDinosaurs
 {
-    public class Battlefield //game class
+    public class Battlefield
     {
         // Member Variables (has a)
-        public Fleet fleet;
-        public Herd herd;
+        public Fleet fleet = new Fleet();
+        public Herd herd = new Herd();
+        public bool robotTurn = false;
 
-        // Constructor
-        public Battlefield()
-        {
-            fleet = new Fleet();
-            herd = new Herd();
-        }
+        // Constructor | Not needed
 
         // Member Methods
-
-        //Random selection of which Dino & Robo start battle
-        public int RandomBattleSelection()
+        public void DinoDown(Dinosaur dino)
         {
-            //Pick random Robot
-            
-            //pick random Dino
+            if (dino.health <= 0)
+            {
+                herd.dinosaurs.Remove(dino);
+            }
+        }
+        public void RoboDown(Robot robo)
+        {
+            if (robo.health <= 0)
+            {
+                fleet.robots.Remove(robo);
+            }
+        }
+        public void DinoTurn(Dinosaur dino)
+        {
+            //attack robot in a list
+            // dinoAttack
+            //give player the option choice who they want to attack
+        }
+        public void RoboTurn()
+        {
+
+        }
+        public void RoboWins()
+        {
+
+        }
+        public void DinoWins()
+        {
+
         }
 
-        //DinoAttackRobo
-        public void DinoAttackRobo(int dinoAttackPower, int roboAttackPower)
-        {
-            //Robo will lose health (depending on Dino's attack power)
-
-        }
-        public void RoboAttackDino()
-        {
-
-            // Decrease Dino health (by Robo's attack power)
-
-        }
         public void RunGame()
         {
-
+         //robotTurn = false;
+        // Run Game keep running until one is depleted loopers
         }
-        //RoundOfBattle | random picked winner
-        //public int RoundOfBattle(int min, int max)
-        //{
-        //    Random BattlePoints = new Random();
-        //    return BattlePoints.Next(min, max);
-        //}
 
-        //Random winner
-        //Display Game Winner
-
-        //if Fleet 
-
-        //Determine how dino wins
-
-        //loop runGame until either Fleet or Herd has a health = 0
-
-        //If Fleet wins
     }
 }
